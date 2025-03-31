@@ -1,0 +1,21 @@
+{
+  "name": "tournament-backend",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Backend that manages Tournaments Created on PBUI",
+  "license": "GPL-3.0-only",
+  "author": "Heggo, Ultraslay",
+  "main": "index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@types/pg": "^8.11.11",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.41.0",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "drizzle-kit": "^0.30.6",
+    "tsx": "^4.19.3"
+  }
+}
