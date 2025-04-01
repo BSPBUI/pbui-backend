@@ -1,14 +1,14 @@
 import { sql } from "drizzle-orm";
-import { integer, pgTable, varchar, check, jsonb } from "drizzle-orm/pg-core";
+import { integer, pgTable, varchar, check, jsonb, serial } from "drizzle-orm/pg-core";
 
 
 export const tournaments = pgTable("tournaments", {
-    id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    id: serial("id").primaryKey(),
     name: varchar({ length: 255 }).notNull(),
     slug: varchar("slug", { length: 255 }).unique().notNull(),
     description: varchar({ length: 255 }).notNull(),
     logo: varchar({ length: 500 }).notNull(),
-    pools: integer().array().notNull(),
+    pools: integer().array().notNull().default(sql`'{}'::int[]`),
     flow: jsonb("flow").notNull()
 }, (table) => [
     check('slug_check', sql`${table.slug} ~ '^[a-z0-9_-]+$'`),
@@ -24,5 +24,6 @@ export const tournaments = pgTable("tournaments", {
 ]);
 
 export const pools = pgTable("pools", {
-    id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    id: serial("id").primaryKey(),
+    url: varchar({ length: 500 }).notNull(),
 });

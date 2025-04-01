@@ -1,28 +1,25 @@
 {
-  "name": "tournament-backend",
+  "name": "pbui-cdn",
   "version": "0.0.1",
   "private": true,
-  "description": "Backend that manages Tournaments Created on PBUI",
+  "description": "Backend that allows pool uploads",
   "license": "GPL-3.0-only",
   "author": "Heggo, Ultraslay",
   "main": "index.ts",
   "scripts": {},
   "dependencies": {
-    "@types/pg": "^8.11.11",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "drizzle-orm": "^0.41.0",
     "express": "^5.1.0",
-    "form-data": "^4.0.2",
     "multer": "^1.4.5-lts.2",
-    "postgres": "^3.4.5"
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.1",
     "@types/multer": "^1.4.12",
-    "@types/node": "^22.13.14",
-    "drizzle-kit": "^0.30.6",
-    "tsx": "^4.19.3"
+    "@types/node": "^22.13.17",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
   }
 }
