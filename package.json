@@ -1,0 +1,42 @@
+{
+  "name": "pbui-backend",
+  "version": "1.0.0",
+  "description": "PBUI Backend Server Code",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BSPBUI/pbui-backend.git"
+  },
+  "author": "Heggo, Ultraslayyy",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/BSPBUI/pbui-backend/issues"
+  },
+  "homepage": "https://github.com/BSPBUI/pbui-backend#readme",
+  "dependencies": {
+    "@types/pg": "^8.11.12",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.41.0",
+    "express": "^5.1.0",
+    "multer": "^1.4.5-lts.2",
+    "pg": "^8.14.1",
+    "postgres": "^3.4.5",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "swagger-ui-dist": "^5.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.14.1",
+    "drizzle-kit": "^0.28.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
