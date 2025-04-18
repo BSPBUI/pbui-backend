@@ -2,7 +2,7 @@ export interface Song_State {
     status: string;
     player: number;
     step: number;
-    name: string
+    name: number;
 }
 
 export interface Song_States {
